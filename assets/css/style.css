@@ -166,3 +166,10 @@ h3 {
     margin: 0;
     font-size: 24px;
 }
+
+.lanche-detalhes{
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ff7b00, #ffb347);
+    color: white;
+}
