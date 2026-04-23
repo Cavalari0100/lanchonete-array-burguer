@@ -90,6 +90,8 @@ p {
 h3 {
     color: #7a1010;
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
 .btn-comprar {

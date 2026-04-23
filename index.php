@@ -48,8 +48,7 @@ $lanches = [
         <img class="banner-img" src="assets/images/banner.png" alt="Imagem de um hambúrguer suculento">
     </main>
     <section class="sessao-lanches">
-        <h2>Confira nossos lanches</h2>
-        <hr>
+        <h2 style="color: #7a1010; font-size: 32px;">Confira nossos lanches</h2>
         <div class="lanche-container">
             <?php
             // Array de lanches
@@ -58,7 +57,7 @@ $lanches = [
                 echo '<img src="' . $lanche['imagem'] . '" alt="' . $lanche['nome'] . '">';
                 echo '<h3>' . $lanche['nome'] . '</h3>';
                 echo '<p>' . $lanche['descricao'] . '</p>';
-                echo '<p>Preço: R$ ' . number_format($lanche['preco'], 2, ',', '.') . '</p>';
+                echo '<p><b>Preço: R$ ' . number_format($lanche['preco'], 2, ',', '.') . '</b></p>';
                 echo '<button class="btn-comprar">Comprar</button>';
                 echo '</div>';
             }
