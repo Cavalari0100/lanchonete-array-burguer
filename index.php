@@ -77,18 +77,19 @@ $sobremesas = [
         <div class="opcoes">
             <img class="logo" src="assets/images/logo.png" alt="Logo Array Burguer">
             <ul>
-                <li><a href="cadastro.php">Cadastro de Produtos</a></li>
-                <li><a href="listar.php">Listar Produtos</a></li>
+                <li><a href="#lanches">Lanches</a></li>
+                <li><a href="#acompanhamentos">Acompanhamentos</a></li>
+                <li><a href="#sobremesas">Sobremesas</a></li>
             </ul>
         </div>
     </nav>
-
+    <button class = "inicio-pagina" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">Início</button>
     <main class="welcome">
         <h1>Bem-vindo ao Array Burguer!</h1>
         <p>O melhor lugar para encontrar os melhores hambúrgueres da cidade.</p>
         <img class="banner-img" src="assets/images/banner.png" alt="Imagem de um hambúrguer suculento">
     </main>
-    <section class="sessao-lanches">
+    <section class="sessao-lanches" id="lanches">
         <h2 style="color: #7a1010; font-size: 32px;">Confira nossos lanches</h2>
         <div class="lanche-container">
             <?php
@@ -106,7 +107,7 @@ $sobremesas = [
 
         </div>
     </section>
-    <section class="sessao-lanches">
+    <section class="sessao-lanches" id="acompanhamentos">
         <h2 style="color: #7a1010; font-size: 32px;">Confira nossos acompanhamentos</h2>
         <div class="lanche-container">
             <?php
@@ -124,7 +125,7 @@ $sobremesas = [
 
         </div>
     </section>
-    <section class="sessao-lanches">
+    <section class="sessao-lanches" id="sobremesas">
         <h2 style="color: #7a1010; font-size: 32px;">Confira nossas sobremesas</h2>
         <div class="lanche-container">
             <?php
