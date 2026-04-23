@@ -44,7 +44,8 @@ a {
     background-color: #7a1010;
 }
 
-.welcome h1 , p {
+.welcome h1,
+p {
     color: #fff2c3;
     padding: 20px;
 }
@@ -66,9 +67,37 @@ a {
     flex-wrap: wrap;
 }
 
-.lanches{
+.lanche {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 12px;
+    border: #7a1010 solid 2px;
+    border-radius: 15px;
+    padding: 15px;
+
+}
+
+.lanche img {
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lanche p,
+h3 {
+    color: #7a1010;
+    text-align: center;
+}
+
+.btn-comprar {
+    background-color: #7a1010;
+    color: #fff2c3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
