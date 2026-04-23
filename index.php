@@ -19,6 +19,47 @@ $lanches = [
         'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$k6X0kr6l/200/200/original?country=br'
     ]
 ];
+$acompanhamentos = [
+    [
+        'nome' => 'McFritas Grande',
+        'descricao' => 'Porção de batatas fritas crocantes e douradas.',
+        'preco' => '12.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$kUXVg4F7/200/200/original?country=br'
+    ],
+    [
+        'nome' => 'Chicken McNuggets 15 unidadess',
+        'descricao' => 'Crocantes, leves e deliciosos. Os irresistíveis McNuggets são feitos com carne 100% peito de frango',
+        'preco' => '14.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$kdXkXf2d/200/200/original?country=br'
+    ],
+    [
+        'nome' => 'Side Salad',
+        'descricao' => 'Porção com 6 nuggets de frango crocantes.',
+        'preco' => '13.50',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$knXN16VD/200/200/original?country=br'
+    ]
+];
+
+$sobremesas = [
+    [
+        'nome' => 'Sorvete',
+        'descricao' => 'Bola de sorvete cremoso nos sabores chocolate, baunilha ou morango.',
+        'preco' => '8.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$McColosso Blueberry.png/200/200/original?country=br'
+    ],
+    [
+        'nome' => 'Petit Gateau',
+        'descricao' => 'Bolinho de chocolate quente com recheio cremoso, acompanhado de sorvete.',
+        'preco' => '16.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$300x225 (1).png/200/200/original?country=br'
+    ],
+    [
+        'nome' => 'Brownie',
+        'descricao' => 'Brownie de chocolate macio servido com calda de chocolate.',
+        'preco' => '12.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$kpXltAm5/200/200/original?country=br'
+    ]
+];
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +106,45 @@ $lanches = [
 
         </div>
     </section>
+    <section class="sessao-lanches">
+        <h2 style="color: #7a1010; font-size: 32px;">Confira nossos acompanhamentos</h2>
+        <div class="lanche-container">
+            <?php
+            // Array de lanches
+            foreach ($acompanhamentos as $acompanhamento) {
+                echo '<div class="lanche">';
+                echo '<img src="' . $acompanhamento['imagem'] . '" alt="' . $acompanhamento['nome'] . '">';
+                echo '<h3>' . $acompanhamento['nome'] . '</h3>';
+                echo '<p>' . $acompanhamento['descricao'] . '</p>';
+                echo '<p><b>Preço: R$ ' . number_format($acompanhamento['preco'], 2, ',', '.') . '</b></p>';
+                echo '<button class="btn-comprar">Comprar</button>';
+                echo '</div>';
+            }
+            ?>
+
+        </div>
+    </section>
+    <section class="sessao-lanches">
+        <h2 style="color: #7a1010; font-size: 32px;">Confira nossas sobremesas</h2>
+        <div class="lanche-container">
+            <?php
+            // Array de sobremesas
+            foreach ($sobremesas as $sobremesa) {
+                echo '<div class="lanche">';
+                echo '<img src="' . $sobremesa['imagem'] . '" alt="' . $sobremesa['nome'] . '">';
+                echo '<h3>' . $sobremesa['nome'] . '</h3>';
+                echo '<p>' . $sobremesa['descricao'] . '</p>';
+                echo '<p><b>Preço: R$ ' . number_format($sobremesa['preco'], 2, ',', '.') . '</b></p>';
+                echo '<button class="btn-comprar">Comprar</button>';
+                echo '</div>';
+            }
+            ?>
+
+        </div>
+    </section>
+    <footer>
+        <p class="contatos">&copy; 2023 Array Burguer. Todos os direitos reservados. &copy; João Vitor C. Spavier</p>
+    </footer>
 
 </body>
 
