@@ -43,7 +43,7 @@ $acompanhamentos = [
 $sobremesas = [
     [
         'nome' => 'Sorvete',
-        'descricao' => 'Bola de sorvete cremoso nos sabores chocolate, baunilha ou morango.',
+        'descricao' => 'Bola de sorvete cremoso nos sabores chocolate,<br> baunilha ou morango.',
         'preco' => '8.00',
         'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$McColosso Blueberry.png/200/200/original?country=br'
     ],
