@@ -26,7 +26,7 @@
     </main>
 
     <section class="sessao-lanches">
-        <h2>Confira nossos lanches !</h2>
+        <h2>Confira nossos lanches</h2>
         <div class="lanche-container">
             <?php
             // Array de lanches
