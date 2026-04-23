@@ -1,11 +1,74 @@
-body{
+body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fff2c3;
     margin: 0;
     padding: 0;
 }
 
 nav {
-    background-color: #333;
+    background-color: #fff2c3;
     padding: 10px;
+}
+
+.opcoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+}
+
+ul {
+    font-size: 26px;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.welcome {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    background-color: #7a1010;
+}
+
+.welcome h1 , p {
+    color: #fff2c3;
+    padding: 20px;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+}
+
+.sessao-lanches {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.lanche-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.lanches{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
