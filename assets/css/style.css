@@ -15,6 +15,7 @@ nav {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    
 }
 
 .logo {
@@ -35,6 +36,14 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+    border: #7a1010 solid 2px;
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+a:hover {
+    background-color: #7a1010;
+    color: #fff2c3;
+    transition: 0.3s;
 }
 
 .welcome {
@@ -167,9 +176,28 @@ h3 {
     font-size: 24px;
 }
 
-.lanche-detalhes{
+.lanche-detalhes {
     text-align: center;
     padding: 40px 20px;
     background: linear-gradient(135deg, #ff7b00, #ffb347);
     color: white;
+}
+
+.alert.alert-success {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.img-propaganda {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    margin: 40px auto;
+    display: block;
 }

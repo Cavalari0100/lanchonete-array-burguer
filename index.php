@@ -41,7 +41,13 @@ include 'dados/dados.php';
             echo '<h3>' . $lanche['nome'] . '</h3>';
             echo '<p>' . $lanche['descricao'] . '</p>';
             echo '<p><b>Preço: R$ ' . number_format($lanche['preco'], 2, ',', '.') . '</b></p>';
-            echo '<a href="' . $lanche['url'] . '"><button class="btn-comprar">Comprar</button></a>';
+            echo "<form action='lanches/itemSelecionado.php' method='post'>"; 
+            echo "<input type='hidden' name='nome' value='" . $lanche['nome'] .  "'>";
+            echo "<input type='hidden' name='imagem' value='" . $lanche['imagem'] .  "'>";
+            echo "<input type='hidden' name='descricao' value='" . $lanche['descricao'] .  "'>";
+            echo "<input type='hidden' name='preco' value='" . $lanche['preco'] .  "'>";
+            echo '<button class="btn-comprar">Comprar</button>';
+            echo "</form>";
             echo '</div>';
         }
         ?>
@@ -58,7 +64,13 @@ include 'dados/dados.php';
             echo '<h3>' . $acompanhamento['nome'] . '</h3>';
             echo '<p>' . $acompanhamento['descricao'] . '</p>';
             echo '<p><b>Preço: R$ ' . number_format($acompanhamento['preco'], 2, ',', '.') . '</b></p>';
+            echo "<form action='lanches/itemSelecionado.php' method='post'>"; 
+            echo "<input type='hidden' name='nome' value='" . $acompanhamento['nome'] .  "'>";
+            echo "<input type='hidden' name='imagem' value='" . $acompanhamento['imagem'] .  "'>";
+            echo "<input type='hidden' name='descricao' value='" . $acompanhamento['descricao'] .  "'>";
+            echo "<input type='hidden' name='preco' value='" . $acompanhamento['preco'] .  "'>";
             echo '<button class="btn-comprar">Comprar</button>';
+            echo "</form>";
             echo '</div>';
         }
         ?>
@@ -76,13 +88,20 @@ include 'dados/dados.php';
             echo '<h3>' . $sobremesa['nome'] . '</h3>';
             echo '<p>' . $sobremesa['descricao'] . '</p>';
             echo '<p><b>Preço: R$ ' . number_format($sobremesa['preco'], 2, ',', '.') . '</b></p>';
+            echo "<form action='itens/itemSelecionado.php' method='post'>"; 
+            echo "<input type='hidden' name='nome' value='" . $sobremesa['nome'] .  "'>";
+            echo "<input type='hidden' name='imagem' value='" . $sobremesa['imagem'] .  "'>";
+            echo "<input type='hidden' name='descricao' value='" . $sobremesa['descricao'] .  "'>";
+            echo "<input type='hidden' name='preco' value='" . $sobremesa['preco'] .  "'>";
             echo '<button class="btn-comprar">Comprar</button>';
+            echo "</form>";
             echo '</div>';
         }
         ?>
 
     </div>
 </section>
+<?php require_once 'C:/xampp/htdocs/lanchonete-array-burguer/assets/estrutura/propaganda.php'; ?>
 <footer>
     <p class="contatos">&copy; 2023 Array Burguer. Todos os direitos reservados. &copy; João Vitor C. Spavier</p>
 </footer>
