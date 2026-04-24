@@ -33,14 +33,14 @@ ul {
     gap: 20px;
 }
 
-a {
+.opcoes a {
     text-decoration: none;
     color: inherit;
     border: #7a1010 solid 2px;
     padding: 20px 30px;
     border-radius: 15px;
 }
-a:hover {
+.opcoes a:hover {
     background-color: #7a1010;
     color: #fff2c3;
     transition: 0.3s;
