@@ -11,9 +11,21 @@
 <body>
     <nav>
         <div class="opcoes">
-            <img class="logo" src="../images/logo.png" alt="Logo Array Burguer">
-            <h1>Compra Confirmada</h1>
+            <a href="../../index.php">
+                <img class="logo" src="../images/logo.png" alt="Logo Array Burguer">
+            </a>
         </div>
     </nav>
-    <button class="inicio-pagina" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><a href="../../index.php">Início</a></button>
+
+    <div class="alert alert-success">
+        <p>&#10003; Compra Confirmada!</p>
+        <p style="font-size: 15px; margin-top: 10px; opacity: 0.9;">Seu pedido foi recebido. Em breve estará pronto!</p>
+        <a href="../../index.php" class="btn-comprar" style="display: inline-block; margin-top: 20px; width: auto; text-decoration: none;">Voltar ao cardápio</a>
+    </div>
+
+    <button class="inicio-pagina" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" title="Voltar ao início">
+        <a href="../../index.php">&#8679;</a>
+    </button>
 </body>
+
+</html>

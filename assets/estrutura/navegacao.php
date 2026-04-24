@@ -11,13 +11,20 @@
 <body>
     <nav>
         <div class="opcoes">
-            <img class="logo" src="../assets/images/logo.png" alt="Logo Array Burguer">
+            <a href="../index.php">
+                <img class="logo" src="../assets/images/logo.png" alt="Logo Array Burguer">
+            </a>
             <ul>
-                <li><a href="#lanches">Lanches</a></li>
-                <li><a href="#acompanhamentos">Acompanhamentos</a></li>
-                <li><a href="#sobremesas">Sobremesas</a></li>
+                <li><a href="#lanches">🍔 Lanches</a></li>
+                <li><a href="#acompanhamentos">🍟 Acompanhamentos</a></li>
+                <li><a href="#sobremesas">🍦 Sobremesas</a></li>
             </ul>
         </div>
     </nav>
-    <button class="inicio-pagina" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"><a href="../index.php">Início</a></button>
+
+    <button class="inicio-pagina" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" title="Voltar ao início">
+        <a href="../index.php">&#8679;</a>
+    </button>
 </body>
+
+</html>

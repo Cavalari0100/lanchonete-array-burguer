@@ -1,19 +1,32 @@
 <?php
 require_once 'C:/xampp/htdocs/lanchonete-array-burguer/dados/dados.php';
-?>
-<div class="propaganda">
-    <h2 style="text-align: center; background-color: #671c1c; color: #fff2c3;">Promoção Especial!</h2>
-    <ul>
-        <li>
-            <img class="img-propaganda" src="<?php echo $lanches[0]['imagem']; ?>" alt="<?php echo $lanches[0]['nome']; ?>">
 
-        </li>
-        <li><img class="img-propaganda" src="<?php echo $acompanhamentos[0]['imagem']; ?>" alt="<?php echo $acompanhamentos[0]['nome']; ?>"></li>
-        <li><img class="img-propaganda" src="<?php echo $lanches[1]['imagem']; ?>" alt="<?php echo $lanches[1]['nome']; ?>">
-        </li>
-        <li><img class="img-propaganda" src="<?php echo $acompanhamentos[1]['imagem']; ?>" alt="<?php echo $acompanhamentos[1]['nome']; ?>"></li>
-        <li><img class="img-propaganda" src="<?php echo $lanches[2]['imagem']; ?>" alt="<?php echo $lanches[2]['nome']; ?>">
-        </li>
-        <li><img class="img-propaganda" src="<?php echo $sobremesas[2]['imagem']; ?>" alt="<?php echo $sobremesas[2]['nome']; ?>"></li>
-    </ul>
-</div>
+$itens_promo = [
+    ['dados' => $lanches[0],        'categoria' => 'Lanche'],
+    ['dados' => $acompanhamentos[0],'categoria' => 'Acompanhamento'],
+    ['dados' => $lanches[1],        'categoria' => 'Lanche'],
+    ['dados' => $acompanhamentos[1],'categoria' => 'Acompanhamento'],
+    ['dados' => $lanches[2],        'categoria' => 'Lanche'],
+    ['dados' => $sobremesas[2],     'categoria' => 'Sobremesa'],
+];
+?>
+
+<section class="propaganda">
+    <h2>🔥 Promoção Especial!</h2>
+    <p class="propaganda-subtitulo">Aproveite nossas ofertas imperdíveis de hoje</p>
+
+    <div class="propaganda-grid">
+        <?php foreach ($itens_promo as $item): ?>
+            <div class="propaganda-card">
+                <span class="propaganda-badge"><?php echo htmlspecialchars($item['categoria']); ?></span>
+                <img
+                    class="img-propaganda"
+                    src="<?php echo htmlspecialchars($item['dados']['imagem']); ?>"
+                    alt="<?php echo htmlspecialchars($item['dados']['nome']); ?>"
+                    loading="lazy"
+                >
+                <p class="propaganda-nome"><?php echo htmlspecialchars($item['dados']['nome']); ?> - <?php echo " R$ " . number_format($item['dados']['preco'], 2, ',', '.'); ?></p>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>

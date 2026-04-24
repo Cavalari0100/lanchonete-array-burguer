@@ -19,6 +19,8 @@ include 'dados/dados.php';
                 <li><a href="#lanches">Lanches</a></li>
                 <li><a href="#acompanhamentos">Acompanhamentos</a></li>
                 <li><a href="#sobremesas">Sobremesas</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
             </ul>
         </div>
     </nav>
@@ -41,7 +43,7 @@ include 'dados/dados.php';
             echo '<h3>' . $lanche['nome'] . '</h3>';
             echo '<p>' . $lanche['descricao'] . '</p>';
             echo '<p><b>Preço: R$ ' . number_format($lanche['preco'], 2, ',', '.') . '</b></p>';
-            echo "<form action='lanches/itemSelecionado.php' method='post'>"; 
+            echo "<form action='itens/itemSelecionado.php' method='post'>"; 
             echo "<input type='hidden' name='nome' value='" . $lanche['nome'] .  "'>";
             echo "<input type='hidden' name='imagem' value='" . $lanche['imagem'] .  "'>";
             echo "<input type='hidden' name='descricao' value='" . $lanche['descricao'] .  "'>";
@@ -64,7 +66,7 @@ include 'dados/dados.php';
             echo '<h3>' . $acompanhamento['nome'] . '</h3>';
             echo '<p>' . $acompanhamento['descricao'] . '</p>';
             echo '<p><b>Preço: R$ ' . number_format($acompanhamento['preco'], 2, ',', '.') . '</b></p>';
-            echo "<form action='lanches/itemSelecionado.php' method='post'>"; 
+            echo "<form action='itens/itemSelecionado.php' method='post'>"; 
             echo "<input type='hidden' name='nome' value='" . $acompanhamento['nome'] .  "'>";
             echo "<input type='hidden' name='imagem' value='" . $acompanhamento['imagem'] .  "'>";
             echo "<input type='hidden' name='descricao' value='" . $acompanhamento['descricao'] .  "'>";
@@ -125,7 +127,9 @@ include 'dados/dados.php';
 
     </div>
 </section>
+<section id="promocoes">
 <?php require_once 'C:/xampp/htdocs/lanchonete-array-burguer/assets/estrutura/propaganda.php'; ?>
+</section>
 <footer>
     <p class="contatos">&copy; 2023 Array Burguer. Todos os direitos reservados. &copy; João Vitor C. Spavier</p>
 </footer>
