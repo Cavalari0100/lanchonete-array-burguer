@@ -32,15 +32,15 @@ $acompanhamentos = [
     ],
     [
         'nome' => 'Chicken McNuggets 15 unidadess',
-        'descricao' => 'Crocantes, leves e deliciosos. Os irresistíveis McNuggets são feitos com carne 100% peito de frango',
+        'descricao' => 'Crocantes, leves e deliciosos peito de frango',
         'preco' => '14.00',
         'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$kdXkXf2d/200/200/original?country=br'
     ],
     [
-        'nome' => 'Side Salad',
-        'descricao' => 'Porção com 6 nuggets de frango crocantes.',
+        'nome' => 'Salada Mix Crispy Beef',
+        'descricao' => 'A Salada Mix Beef combina alface, tomatinhos, cebola ao molho shoyu, picles e bacon triturado',
         'preco' => '13.50',
-        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$knXN16VD/200/200/original?country=br'
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$original.png/200/200/original?country=br'
     ]
 ];
 
@@ -64,4 +64,23 @@ $sobremesas = [
         'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$kpXltAm5/200/200/original?country=br'
     ]
 ];
-?>
+$bebidas = [
+    [
+        'nome' => 'Coca-Cola',
+        'descricao' => 'Refrigerante clássico com sabor refrescante e inconfundível.',
+        'preco' => '6.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$coca cola_500ml.png/200/200/original?country=br'
+    ],
+    [
+        'nome' => 'Fanta Laranja',
+        'descricao' => 'Refrigerante de laranja com sabor frutado e refrescante.',
+        'preco' => '6.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$fanta laranja_500ml.png/200/200/original?country=br'
+    ],
+    [
+        'nome' => 'Sprite',
+        'descricao' => 'Refrigerante de limão com sabor leve e refrescante.',
+        'preco' => '6.00',
+        'imagem' => 'https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$sprite sem açúcar_500ml.png/200/200/original?country=br'
+    ]
+];

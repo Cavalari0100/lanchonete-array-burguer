@@ -31,7 +31,7 @@ include 'dados/dados.php';
     <img class="banner-img" src="assets/images/banner.png" alt="Imagem de um hambúrguer suculento">
 </main>
 <section class="sessao-lanches" id="lanches">
-    <h2 style="color: #7a1010; font-size: 32px;">Confira nossos lanches</h2>
+    <h2 style="text-align: center; background-color: #671c1c; color: #fff2c3;">Confira nossos lanches</h2>
     <div class="lanche-container">
         <?php
         // Array de lanches
@@ -54,7 +54,7 @@ include 'dados/dados.php';
     </div>
 </section>
 <section class="sessao-lanches" id="acompanhamentos">
-    <h2 style="color: #7a1010; font-size: 32px;">Confira nossos acompanhamentos</h2>
+    <h2 style="text-align: center; background-color: #671c1c; color: #fff2c3;">Confira nossos acompanhamentos</h2>
     <div class="lanche-container">
         <?php
         // Array de lanches
@@ -78,7 +78,7 @@ include 'dados/dados.php';
     </div>
 </section>
 <section class="sessao-lanches" id="sobremesas">
-    <h2 style="color: #7a1010; font-size: 32px;">Confira nossas sobremesas</h2>
+    <h2 style="text-align: center; background-color: #671c1c; color: #fff2c3;">Confira nossas sobremesas</h2>
     <div class="lanche-container">
         <?php
         // Array de sobremesas
@@ -93,6 +93,30 @@ include 'dados/dados.php';
             echo "<input type='hidden' name='imagem' value='" . $sobremesa['imagem'] .  "'>";
             echo "<input type='hidden' name='descricao' value='" . $sobremesa['descricao'] .  "'>";
             echo "<input type='hidden' name='preco' value='" . $sobremesa['preco'] .  "'>";
+            echo '<button class="btn-comprar">Comprar</button>';
+            echo "</form>";
+            echo '</div>';
+        }
+        ?>
+
+    </div>
+</section>
+<section class="sessao-lanches" id="bebidas">
+    <h2 style="text-align: center; background-color: #671c1c; color: #fff2c3;">Confira nossas bebidas</h2>
+    <div class="lanche-container">
+        <?php
+        // Array de bebidas
+        foreach ($bebidas as $bebida) {
+            echo '<div class="lanche">';
+            echo '<img src="' . $bebida['imagem'] . '" alt="' . $bebida['nome'] . '">';
+            echo '<h3>' . $bebida['nome'] . '</h3>';
+            echo '<p>' . $bebida['descricao'] . '</p>';
+            echo '<p><b>Preço: R$ ' . number_format($bebida['preco'], 2, ',', '.') . '</b></p>';
+            echo "<form action='itens/itemSelecionado.php' method='post'>"; 
+            echo "<input type='hidden' name='nome' value='" . $bebida['nome'] .  "'>";
+            echo "<input type='hidden' name='imagem' value='" . $bebida['imagem'] .  "'>";
+            echo "<input type='hidden' name='descricao' value='" . $bebida['descricao'] .  "'>";
+            echo "<input type='hidden' name='preco' value='" . $bebida['preco'] .  "'>";
             echo '<button class="btn-comprar">Comprar</button>';
             echo "</form>";
             echo '</div>';
